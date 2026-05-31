@@ -1,0 +1,29 @@
+[project]
+name = "quote-and-quill-backend"
+version = "1.1.1"
+description = "A writing game where players turn the same random quote into creative texts and vote for the best. "
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard-no-fastapi-cloud-cli]>=0.136.3",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.15",
+]
+
+[tool.fastapi]
+entrypoint = "app.main:app"
+
+[tool.ruff]
+target-version = "py314"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "I",
+    "UP",
+    "B",
+]
